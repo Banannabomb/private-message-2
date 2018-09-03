@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nRA-6F-la4">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="private_message" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nrM-mL-2m3">
+                                <rect key="frame" x="15" y="64" width="345" height="603"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fm1-i8-W88">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="195.5"/>
+                                        <state key="normal" title="Write a message"/>
+                                        <connections>
+                                            <segue destination="SJK-no-Ck8" kind="show" identifier="showMessageWrite" id="QZH-WL-pgW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqK-bL-qUJ">
+                                        <rect key="frame" x="0.0" y="203.5" width="345" height="196"/>
+                                        <state key="normal" title="Create a passphrase"/>
+                                        <connections>
+                                            <segue destination="j48-Ed-Q1N" kind="show" identifier="showPassphraseCreation" id="Aff-FM-82h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aV7-ZB-lIW">
+                                        <rect key="frame" x="0.0" y="407.5" width="345" height="195.5"/>
+                                        <state key="normal" title="Enter a passphrase"/>
+                                        <connections>
+                                            <segue destination="DGE-Jf-BkZ" kind="show" identifier="showPassphraseEnter" id="4gT-Te-1ac"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nrM-mL-2m3" secondAttribute="trailing" constant="15" id="6Gc-WI-ZXh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nrM-mL-2m3" secondAttribute="bottom" id="Rtn-mZ-s5U"/>
+                            <constraint firstItem="nrM-mL-2m3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kF1-iY-oQb"/>
+                            <constraint firstItem="nrM-mL-2m3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ldj-ya-kA2"/>
+                            <constraint firstItem="nrM-mL-2m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ns0-YL-1Gc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DCK-rB-Wwz">
+                        <barButtonItem key="rightBarButtonItem" title="How to use" id="aE0-d5-YyZ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2935.1999999999998" y="118.29085457271366"/>
+        </scene>
+        <!--showWriteMessage-->
+        <scene sceneID="2VG-Me-ZUL">
+            <objects>
+                <viewController title="showWriteMessage" id="SJK-no-Ck8" customClass="showWriteMessageViewController" customModule="private_message" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Cy-gj-ntF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a message in the text view below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kG3-T2-hia">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kn0-DK-iN4">
+                                <rect key="frame" x="16" y="93" width="343" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kG3-T2-hia" firstAttribute="leading" secondItem="3px-Y3-TiY" secondAttribute="leading" constant="16" id="5sz-Zd-hQZ"/>
+                            <constraint firstItem="kG3-T2-hia" firstAttribute="top" secondItem="3px-Y3-TiY" secondAttribute="top" id="GmL-h1-dBZ"/>
+                            <constraint firstItem="3px-Y3-TiY" firstAttribute="trailing" secondItem="kn0-DK-iN4" secondAttribute="trailing" constant="16" id="ej4-sx-kIp"/>
+                            <constraint firstItem="kn0-DK-iN4" firstAttribute="leading" secondItem="3px-Y3-TiY" secondAttribute="leading" constant="16" id="gs5-5r-zw9"/>
+                            <constraint firstItem="3px-Y3-TiY" firstAttribute="trailing" secondItem="kG3-T2-hia" secondAttribute="trailing" constant="16" id="i9i-I8-SxM"/>
+                            <constraint firstItem="kn0-DK-iN4" firstAttribute="top" secondItem="kG3-T2-hia" secondAttribute="bottom" constant="8" id="kiK-kh-BoY"/>
+                            <constraint firstItem="3px-Y3-TiY" firstAttribute="bottom" secondItem="kn0-DK-iN4" secondAttribute="bottom" constant="20" id="ljb-ew-uF3"/>
+                            <constraint firstItem="kn0-DK-iN4" firstAttribute="top" secondItem="kG3-T2-hia" secondAttribute="bottom" constant="8" id="tYU-w2-TBn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3px-Y3-TiY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kdF-sU-b7g">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jRt-B4-wL5">
+                            <connections>
+                                <segue destination="tJz-5K-tVa" kind="unwind" identifier="cancelWriteMessage" unwindAction="unwindWithSegue:" id="c8I-MX-CsN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="RNb-bs-qYV">
+                            <connections>
+                                <segue destination="tJz-5K-tVa" kind="unwind" identifier="saveWriteMessage" unwindAction="unwindWithSegue:" id="mOb-go-6hF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="messageTextView" destination="kn0-DK-iN4" id="G4N-sk-jmm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A9H-U9-G2x" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tJz-5K-tVa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3719.1999999999998" y="-520.38980509745136"/>
+        </scene>
+        <!--showCreateAPassphrase-->
+        <scene sceneID="68x-fA-htm">
+            <objects>
+                <viewController title="showCreateAPassphrase" id="j48-Ed-Q1N" customClass="showCreateAPassphraseViewController" customModule="private_message" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CHy-he-FQc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a passphrase in the textview" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Hf-qY-uak">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Kp-dk-Cdo">
+                                <rect key="frame" x="16" y="93" width="343" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sXz-C7-5dd" firstAttribute="trailing" secondItem="4Kp-dk-Cdo" secondAttribute="trailing" constant="16" id="AK6-hx-JXK"/>
+                            <constraint firstItem="6Hf-qY-uak" firstAttribute="top" secondItem="sXz-C7-5dd" secondAttribute="top" id="BRM-YQ-mgu"/>
+                            <constraint firstItem="4Kp-dk-Cdo" firstAttribute="top" secondItem="6Hf-qY-uak" secondAttribute="bottom" constant="8" id="Cav-3d-mX8"/>
+                            <constraint firstItem="4Kp-dk-Cdo" firstAttribute="top" secondItem="6Hf-qY-uak" secondAttribute="bottom" constant="8" id="M6S-8U-6Si"/>
+                            <constraint firstItem="sXz-C7-5dd" firstAttribute="bottom" secondItem="4Kp-dk-Cdo" secondAttribute="bottom" constant="20" id="gMZ-rf-zr5"/>
+                            <constraint firstItem="4Kp-dk-Cdo" firstAttribute="leading" secondItem="sXz-C7-5dd" secondAttribute="leading" constant="16" id="hnZ-8c-G1l"/>
+                            <constraint firstItem="6Hf-qY-uak" firstAttribute="leading" secondItem="sXz-C7-5dd" secondAttribute="leading" constant="16" id="ukc-4t-GP3"/>
+                            <constraint firstItem="sXz-C7-5dd" firstAttribute="trailing" secondItem="6Hf-qY-uak" secondAttribute="trailing" constant="16" id="vew-Wk-gxZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sXz-C7-5dd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ceV-0m-aER">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="HNh-RI-eLx">
+                            <connections>
+                                <segue destination="M2X-cj-bIe" kind="unwind" identifier="cancelCreateAPassphrase" unwindAction="unwindWithSegue:" id="UwF-gG-nBE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="CeS-mA-fXS">
+                            <connections>
+                                <segue destination="M2X-cj-bIe" kind="unwind" identifier="saveCreateAPassphrase" unwindAction="unwindWithSegue:" id="5tJ-43-Qg7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passphraseTextView" destination="4Kp-dk-Cdo" id="8lY-2f-AO2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kdk-gc-MA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M2X-cj-bIe" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3719.1999999999998" y="117.39130434782609"/>
+        </scene>
+        <!--showEnterAPassphrase-->
+        <scene sceneID="D5l-Uj-J9r">
+            <objects>
+                <viewController title="showEnterAPassphrase" id="DGE-Jf-BkZ" customClass="showEnterAPassphraseViewController" customModule="private_message" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AFM-av-LdP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a passphrase to view a message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yte-bb-Gc7">
+                                <rect key="frame" x="16" y="64" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6uP-fR-p4p">
+                                <rect key="frame" x="16" y="93" width="343" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dhb-Gy-eS1" firstAttribute="trailing" secondItem="yte-bb-Gc7" secondAttribute="trailing" constant="16" id="0Ii-97-lzC"/>
+                            <constraint firstItem="6uP-fR-p4p" firstAttribute="top" secondItem="yte-bb-Gc7" secondAttribute="bottom" constant="8" id="4g9-mb-hd5"/>
+                            <constraint firstItem="6uP-fR-p4p" firstAttribute="top" secondItem="yte-bb-Gc7" secondAttribute="bottom" constant="8" id="54u-s9-oMH"/>
+                            <constraint firstItem="yte-bb-Gc7" firstAttribute="leading" secondItem="dhb-Gy-eS1" secondAttribute="leading" constant="16" id="Gpm-xN-h44"/>
+                            <constraint firstItem="dhb-Gy-eS1" firstAttribute="bottom" secondItem="6uP-fR-p4p" secondAttribute="bottom" constant="20" id="Lh6-vU-Gu7"/>
+                            <constraint firstItem="yte-bb-Gc7" firstAttribute="top" secondItem="dhb-Gy-eS1" secondAttribute="top" id="Pvs-Ke-wTD"/>
+                            <constraint firstItem="dhb-Gy-eS1" firstAttribute="trailing" secondItem="6uP-fR-p4p" secondAttribute="trailing" constant="16" id="RSL-Xv-wRy"/>
+                            <constraint firstItem="6uP-fR-p4p" firstAttribute="leading" secondItem="dhb-Gy-eS1" secondAttribute="leading" constant="16" id="uBF-gR-YF5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dhb-Gy-eS1"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bmh-Ob-fL3">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="igf-qM-9nO">
+                            <connections>
+                                <action selector="clearOnCancel:" destination="DGE-Jf-BkZ" id="qBK-jg-5mX"/>
+                                <segue destination="G3f-tT-QCN" kind="unwind" identifier="cancelEnterAPassphrase" unwindAction="unwindWithSegue:" id="deR-P5-7QI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Enter" id="eUo-sc-jMM">
+                            <connections>
+                                <action selector="showAlert:" destination="DGE-Jf-BkZ" id="82q-sB-a27"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="PassphraseEntry" destination="6uP-fR-p4p" id="rO4-pK-hfs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zd2-2n-IDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="G3f-tT-QCN" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3717.5999999999999" y="832.53373313343332"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ed9-ng-IoX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nRA-6F-la4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XSb-cz-IUL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pRG-Q0-Woh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d9e-Gb-Mx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1996" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
